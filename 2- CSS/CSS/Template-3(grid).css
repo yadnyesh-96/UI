@@ -2,8 +2,123 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* background-color: aqua; */
 }
-.body{
+/* .body{
     
+} */
+.box{
+    width: 80%;
+    margin: auto;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 700px 600px 700px 450px 250px;
+    grid-template-areas: "header header header"
+    "slider slider slider"
+    "box-1 box-2 box-3"
+    "content-1 content-1 content-1"
+    "info info info"
+    "footer footer footer";
+}
+.entity{
+    border: 1px solid #ff0000;
+}
+
+/* header start from here  */
+.header{
+    grid-area: header;
+    background-color: #D6F4ED;
+    
+    display: flex;
+}
+.header .logo{
+    width: 20%;
+    height: 100px;
+    border: 1px solid #fafafa;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    gap: 20px;
+}
+.logo img{
+    width: 25%;
+    border: 1px solid #4734725e;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+.logo h1{
+    font-size: 28px;
+    font-weight: 900;
+
+    color: #473472;
+}
+.header .menu{
+    width: 50%;
+    height: 100px;
+    border: 1px solid #fffcfc;   
+    align-content: center;
+}
+.menu ul{
+    width: 100%;
+    list-style: none;
+    display:flex;
+    justify-content: space-evenly;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #473472;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* border: 1px solid #000; */
+    padding: 8px;
+    border-radius: 10px;
+}
+.menu ul li a:hover{
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transform:scaleX(00.3s);
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    background-color: #473472ac;
+    color: white;
+}
+.header .button{
+    width: 30%;
+    height: 100px;
+    border: 1px solid #faf9f9;
+}
+
+/* slider from here  */
+.slider{
+    grid-area: slider;
+    background-color: aliceblue;
+}
+.box-1{
+    grid-area: box-1;
+    background-color: black;
+}
+.box-2{
+    grid-area: box-2;
+    background-color: aliceblue;
+}
+.box-3{
+    grid-area: box-3;
+    background-color: #000;
+}
+.content-1{
+    grid-area: content-1;
+    background-color: rgba(0, 255, 255, 0.249);
+
+}
+.info{
+    grid-area: info;
+    background-color: aliceblue;
+}
+.footer{
+    grid-area: footer;
+    background-color: #000;
 }
